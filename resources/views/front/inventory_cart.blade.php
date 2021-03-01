@@ -115,15 +115,13 @@
                                        <input name="subt[]" class='subT' type="text" value="{{ Cart::getTotalQuantity() }}" style="display:none">
                                 </td>
                                 <td>
-                                    <!-- <a href="javascript:void(0);" data-id="{{ $cart->id }}" class="mp-del-cart" data-url="{{ route('frontDeleteCart') }}"><span class="icon--payment--delete"></span></a> -->
-
+                                   <!--  <a href="javascript:void(0);" data-id="{{ $cart->id }}" class="mp-del-cart" data-url="{{ route('frontDeleteCart') }}"><span class="icon--payment--delete"></span></a>
+ -->
                                 <form action="{{ route('frontDeleteCart') }}" method="POST" enctype="multipart/form-data" @submit.prevent>
                             		{{ csrf_field() }}
-                            		<input type="hidden" value="{{ $cart->id }}" name="id">
-                                  <!-- <input type="submit" id="product_detail_add_to_cart_submit"  class="button--cart " name="submit" value="X" /> -->
-
-                                  <button type="submit" name="submit" value="x" class="btn--del-cart mp-del-cart"><span class="icon--payment--delete"></span></button>
-                            	</form>
+                            		  <input type="hidden" value="{{ $cart->id }}" name="id" data-id="{{ $cart->id }}">
+                                  <button type="submit" name="submit" value="x" class="btn--del-cart"><span class="icon--payment--delete"></span></button>
+                            	   </form>
 
                                 </td>
                           </tr>
@@ -151,13 +149,6 @@
                     <br>
                     <article class="giftnote__box">
                           <b><p>Shipping details</p></b>
-                          <!-- <ul style="">
-                            <li class="">
-                              <input id="col--1" type="checkbox" name="billing" value="1">
-                              <label for="col--1">This order is a gift, please submit billing details. Include a gift note below.</label>
-                            </li>
-                          </ul> -->
-                          <!-- <textarea class="giftnote--textarea" name="gift_note" id="" rows="5"></textarea> -->
                           <div class="shipping__option__container" id="option__shipping__container1">
 
                                                   <!-- Name -->
@@ -198,48 +189,4 @@
         </div>
     </section>
 </div>
-
- @if(Session::has('sukses'))
-<!-- popup if  -->
-<section class="popup__shopping--wrapper popup--wrapper popup--show" id="popup__pm">
-  <div class="popup__pm--overlay popup--overlay"></div>
-    <div class="popup__shopping">
-      <div class="popup__pmin">
-        <div class="shopping__alert">
-            <h2 class="shopping__alert--h2"><span class="icon--paymentmethod--error"></span> Orders must reach a minimum order</h2>
-            <hr class="line--hr">
-            <h2>Your order must reach a minimum amount of Rp 400.000, Before shipping.</h2>
-            <br>
-            <p><a href="{{ route('frontProduct')}}">Continue Shopping</a></p>
-        </div>
-      </div>        
-    </div>
-</section>
-@endif
-<!-- popup if  -->
-<script>
-
-      //When DOM loaded we attach click event to button
-      $(document).ready(function() {
-          
-          //attach keypress to input
-          $('.qty').keydown(function(event) {
-              // Allow special chars + arrows 
-              if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 
-                  || event.keyCode == 27 || event.keyCode == 13 
-                  || (event.keyCode == 65 && event.ctrlKey === true) 
-                  || (event.keyCode >= 35 && event.keyCode <= 39)){
-                      return;
-              }else {
-                  // If it's not a number stop the keypress
-                  if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
-                      event.preventDefault(); 
-                  }   
-              }
-          });
-          
-      });
-
-</script>
-
-@stop                  
+@stop
