@@ -20,7 +20,7 @@ Route::get('/welcome', function () {
 Route::get('/', 'InventoryController@index');
 Route::get('/product', 'InventoryController@index')->name('frontProduct');;
 Route::get('/product/detail/{id}', 'InventoryController@detail')->name('frontDetail');
-Route::post('/cart', 'InventoryController@store')->name('frontCart');
-Route::get('/inventory-cart', 'InventoryController@show')->name('frontShoppingCart');
-Route::post('/checkout', 'InventoryController@checkout')->name('frontCheckout');
-Route::post('/delete-cart', 'InventoryController@deleteCart')->name('frontDeleteCart');
+Route::post('/cart', 'CartController@store')->name('frontCart');
+Route::get('/inventory-cart', 'CartController@show')->name('frontShoppingCart');
+Route::post('/checkout', 'CartController@checkout')->name('frontCheckout');
+Route::post('/delete-cart', 'CartController@deleteCart')->name('frontDeleteCart');
