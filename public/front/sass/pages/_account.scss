@@ -1,0 +1,247 @@
+
+// products page
+
+.line--hr{
+	border:none;
+  border-top:1px solid #b5b5b5;
+  margin:10px 0;
+}
+
+section.account__wrapper{
+  margin:0;
+  padding:0;
+  	.account--main{
+  			.account__right{
+  				display:inline-block;
+  				float: right;
+  				// width: 250px;
+  				border:1px solid #e4e3e3;
+  				border-radius:4px;
+  				padding:0 0 0px 0;
+					.logo--fs--mini{
+						float:left;
+						display:inline-block;
+						margin:10px 10px 4px 20px;
+					}
+					h4.account__right--h4{
+						float:left;
+						display:inline-block;
+						margin:30px 0 0 5px;
+						padding:0;
+					}
+					.account__right--hr{
+						@extend .line--hr;
+						clear:both;
+						border-top:2px solid #d2d2d2 !important;
+					}
+					.account__right--ul{
+						padding:0;
+						overflow: hidden;
+							.account__right--li{
+								list-style: none;
+								a.account__right--a{
+									cursor: pointer;
+									display: block;
+									// width:210px;
+									font-family: 'Avenir-medium';
+									font-size:14px;									
+									color:#000;
+									margin:0 auto;
+									// padding:6px 0 6px 20px;
+									border-bottom:1px solid #ebebeb;
+									&:hover{
+										padding:6px 0 6px 20px;
+										width: initial !important;
+										background:#f8f8f8;
+									}
+								}								
+							}
+							.account__right--active{
+								a.account__right--a{
+									width: initial !important;
+									font-weight: bold;
+									color:#fff !important;
+									background:#d2d2d2;
+									&:hover{
+										width: initial !important;
+										background:#d2d2d2;
+									}
+								}
+							}
+							.account__right--li:last-child{
+								a.account__right--a{
+									border-bottom:0;
+								}
+							}
+
+					}
+  			}
+  			.account__left{
+  				display:inline-block;  				
+  				margin:40px 0 0 0;
+  					#account_profile{
+  						display:inline-block;  						
+  					}
+					.tab--account{
+						display:none; // display:inline-block;
+						float:left;
+						// width:465px;
+							.account__content--h2{
+								color:#000;
+							}
+							.form__content--hr{
+								@extend .line--hr;
+								clear:both;
+								border-top:2px solid #ebebeb !important;								
+							}							
+					}
+					#account_orderhistory{
+						@extend .tab--account;
+						// width: 645px;
+						.orderhistory__wrapper{}
+							.invoice__data__wrapper{
+								display: none;
+								// @include delay(.3s);									
+									.invoice__wrapper{}
+									.detailinformation__wrapper{}
+									.giftnote__wrapper{
+										.giftnote--info--h4{
+											margin:10px 0;
+											color:#000;
+										}
+										p.giftnote--info{
+											margin:6px 0;
+											font-size: 13px;
+											font-family: 'MyriadPro-Regular';
+											color:#000;
+										}
+										p.giftnote--info--desc{
+											margin:0 0 0 15px;
+											font-size: 13px;
+											font-family: 'Avenir-Medium';
+											color:#555;
+										}
+									}
+									.status__wrapper{
+										.status--expired{
+											padding:0 20px 0 0;
+												p{
+													color:#e22b00;
+												}
+										} 
+										.status--waiting {
+											padding:0 20px 0 0;
+												p{
+													color:#f3c409;
+												}
+										}										
+										.status--paid {
+											font-family: 'Avenir-Medium';
+											color:#000;
+												.status--paid--info{
+													margin:5px 0;											
+												}
+												.status--paid--label{
+													display: inline-block;
+													// width:200px;
+													font-weight:bold;
+												}
+												.status--paid--span{
+													margin:0 0 0 20px;
+												}
+										}										
+									}
+							}							
+					}
+					#account_paymentconfirmation{
+						@extend .tab--account;
+					}
+  			}
+  	}
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+	.account__right{
+		width: 100%;
+			.account__right--ul{
+				margin:0 0;
+				.account__right--li{
+					a.account__right--a{
+						width:100%;
+						padding:6px 0 6px 20px;
+					}								
+				}
+			}
+	}
+	.account__left{
+		width:100%;
+			.tab--account,
+			#account_orderhistory{
+				width:100%;
+			}
+	}
+	.status--paid--label{
+		width:85px;
+	}
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+	.status--paid--label{
+		width:200px;
+	}
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+}
+
+/* (1023px above)----------- */
+@media only screen 
+and (min-width : 1023px) {
+	.account__right{
+		width: 250px;
+			.account__right--ul{
+				margin:1em 0;
+					.account__right--li{
+						a.account__right--a{
+							width:210px;
+							padding:6px 0 6px 0px;
+						}								
+					}
+					.account__right--active{
+						a.account__right--a{
+							padding:6px 0 6px 20px;
+						}
+					}
+			}
+	}
+	.account__right--account{
+		margin:80px 0 0 0;
+	}
+	.account__left{
+		width:inherit;
+			.tab--account{
+				width:465px;
+			}
+			#account_orderhistory{
+				width:645px !important;
+			}
+	}
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {  
+}
+
+/* (1440px above)----------- */
+@media only screen 
+and (min-width : 1440px) { 
+}

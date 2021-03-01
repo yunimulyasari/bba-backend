@@ -1,0 +1,327 @@
+
+// header 
+
+section.header{
+  position:relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  z-index: 105;
+
+    ul.menu--accountname__responsive--ul{
+      display: none;
+      width: 100%;
+      margin:0;
+      padding:0; 
+      list-style: none;                                                  
+        .menu--accountname__responsive--li{
+          width: 100%;
+          background: #3d83f7;
+          border-bottom: 1px solid #fff;
+          text-align: right;
+          &:first-child{
+            background: #5e5d5d;
+            border-bottom: 1px solid #000;
+              .menu--accountname__responsive--a{
+                color:#fff;                                                           
+              }
+          }
+          &:hover{
+            background:#2375fc;
+            .menu--accountname__responsive--a{
+              color:#2a2a2a;                                                            
+            }
+            &:first-child{
+              background: #5e5d5d;
+                .menu--accountname__responsive--a{
+                  color:#fff;                                                           
+                }
+            }
+          }  
+            .menu--accountname__responsive--a{
+              display: block;
+              font-family: 'MyriadPro-Regular';
+              color:#fff; 
+              font-size: 14px;
+              padding:10px 15px;                                                             
+            }
+        }
+    }    
+    .header__menu__wrapper{
+      display:inline-block;
+      // width:960px;
+      // margin:20px auto;
+      // background:#aaa;
+        .header__menu--logo{
+          display: inline-block;
+          float:left;
+          // position:absolute;
+          // top:0; left:0;
+        }
+        .header__menu--menu{
+          display: inline-block;
+          float:right;
+          // width: 820px;
+          // background:#999;
+          // margin:0; 
+          // padding:17px 0;
+            nav.menu__account{
+              clear:both;
+                .menu__account--ul{
+                  display: inline-block;
+                  // width: 167px;
+                  float:right;
+                  // margin:0 10px 3px 0; 
+                  padding:0;
+                  // background:#aaa;
+                    .menu__account--li{
+                      display: inline-block;
+                      float:left;
+                      margin:5px 8px;
+                        .icons__cart{
+                          position:relative;
+                          z-index: 107;
+                          cursor: pointer;
+                            .cart--nmr{
+                              position:absolute;
+                              top:-11px;
+                              right:-12px;                              
+                              margin:0; padding:0;
+                              width:19px; height:19px;
+                              background:#1f72fc;
+                              border-radius:50%;
+                              color:#fff;
+                              font-size:11px;
+                              text-align: center;
+                              line-height:19px;
+                            }
+                        }
+                        .popup--search--a{
+                          position:relative;
+                          z-index: 107;
+                        }
+                        .button--login{
+                          margin:-4px 0 0 0;
+                        }
+                        .button--login--text{
+                          position:relative;
+                          cursor:pointer;
+                          color:#2375fc;
+                          margin:0 20px 0 0;
+                          opacity:0.8;
+                          &:hover{
+                              opacity:1;
+                          }
+                        } 
+                        ul.menu--accountname--ul{
+                          // top:0;
+                          right:17px;
+                          position: absolute;
+                          margin:0;
+                          padding:0;                                                  
+                            .menu--accountname--li{
+                              width: 180px;
+                              background: rgba(235, 235, 235, 0.95);
+                              &:first-child{
+                                border-radius: 5px 5px 0 0;
+                              }   
+                              &:last-child{
+                                border-radius: 0 0 5px 5px;
+                              }
+                              &:hover{
+                                background:#d2d2d2;
+                                .menu--accountname--a{
+                                  color:#fff;                                                            
+                                }
+                              }  
+                                .menu--accountname--a{
+                                  display: block;
+                                  font-family: 'MyriadPro-Regular';
+                                  color:#2a2a2a;
+                                  text-align: right;
+                                  font-size: 14px;
+                                  padding:7px 6px;                                                             
+                                }
+                            }
+                        }
+                        .hide--menu--accountname{
+                          top:65px;
+                          opacity:0;
+                          visibility: hidden;
+                          @include delay(all 0.3s);
+                        }
+                        .show--menu--accountname{
+                          top:43px;
+                          opacity:1;
+                          visibility: visible;
+                          @include delay(all 0.3s);                          
+                        }                        
+                    }
+                }
+            }
+            hr{
+              clear:both;
+              border-top:1px solid rgba(0,0,0,0.4);
+              border-right:0; border-bottom:0; border-left:0;
+              margin:0; padding:0;
+            }
+            nav.menu__page{
+              clear:both;
+                .menu__page--ul{
+                  display: inline-block;
+                  // width: 535px;
+                  float: right;
+                  margin:0; padding:0;
+                  // background:#444;
+                    .menu__page--li{
+                      display: inline-block;
+                      float: left;
+                      text-align: right;
+                      margin:5px 16px;
+                        a{
+                            font-size: 16px;
+                            color:#000;
+                            &:hover{
+                                color:#b49b8a;
+                            }
+                        }
+                    }
+                }
+            }
+            .logo--menu{
+              float:right;
+              cursor: pointer;
+              margin:8px 10px 4px 0;                
+            }                       
+        }
+        nav.menu__responsive{
+          display: none;
+          position:relative;
+          width: 100%;
+          // top:85px; right:10px;
+          clear:both;
+          z-index:100;
+            .menu__responsive--ul{
+              display: inline-block;
+              margin:0; padding:0;                  
+              background:#555;
+              width: 100%;
+                .menu__responsive--li{                      
+                  width: 100%;
+                  text-align:right;
+                  padding:5px 0px;
+                  border-bottom:1px solid #f1f1f1;
+                    &:hover{
+                      background:#4b4848;
+                    }
+                    a{
+                        display: block;
+                        font-size: 14px;
+                        font-weight:100;
+                        letter-spacing: 1px;
+                        color:#fff;
+                        padding: 5px 10px 5px 0px;
+                        &:hover{
+                            // color:#1f72fc;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+  .header__menu__wrapper{
+    position: relative;
+    width:100%;
+    margin:0px auto;
+      .header__menu--logo{
+        @include scale (0.7);
+        position:absolute;
+        top:-5px; 
+        left:-20px; // left:-55px;
+        padding: 0 30px 0 0px; // padding: 0 120px 0 0px;
+        background:url('../images/logo--flowerstudio.png') no-repeat center center #fff;
+        z-index: 106;
+      }
+      .header__menu--menu{
+        position:relative;
+        width:100%;
+        padding:10px 0 5px 0;
+        z-index: 104;
+      }
+  }
+  .accountname--mobile{
+    display: inline-block !important;
+  }
+  .accountname--desktop{
+    display: none !important;
+  }
+  // .button--login,
+  .menu__page{
+    display:none;
+  }
+  .menu__account--ul{    
+    margin:0 3px 3px 0; //margin:0 -10px 3px 0;
+  }
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+  .cart--search,
+  .button--login,
+  .menu__page{
+    display:block;
+  }
+  .accountname--mobile{
+    display: none !important;
+  }
+  .accountname--desktop{
+    display: inline-block !important; 
+  }
+  .menu__account--ul{
+    // width:167px;
+    margin:0 10px 3px 0;        
+  }
+  .logo--menu{
+    display:none;
+  }
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+  section.header{
+    height:auto;
+  }
+  .header__menu__wrapper{
+    width:990px;
+    left:0;
+    margin:10px auto 15px auto;
+      .header__menu--logo{
+        left:0;
+        @include scale (1);
+        background:url('../images/logo--flowerstudio.png') no-repeat #fff;
+        padding:0px 80px 0px 0px;
+      }
+  }
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1440px above)----------- */
+@media only screen 
+and (min-width : 1900px) {
+  .header__menu__wrapper{
+    width:1800px;
+  } 
+}

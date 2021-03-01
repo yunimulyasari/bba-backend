@@ -1,0 +1,114 @@
+
+// payment success
+
+.payment__success{
+	display:block;
+	// margin:60px 0 0 0;
+		h2.payment__success--h2{
+			color:#0eb41f;
+		}
+		hr.payment__success--hr{
+			@extend .line--hr !optional;
+			width:100%;
+			margin:20px 0 !important;
+			border-top:1px solid #ebebeb !important;
+		}
+		p.payment__success--p{
+			color:#555;
+			line-height: 30px;
+				a{
+					color:#2692e9;
+					&:hover{
+						color:#2692e9;
+					}
+				}				
+				.payment__success__label{
+					display: inline-block;
+					// width:150px;
+				}
+				.payment__success__labelhr{
+					display: inline-block;
+					@extend .line--hr !optional;
+					// width:300px;
+					margin:0px 0 5px 0 !important;
+					border-top:1px solid #ebebeb !important;
+				}
+				b.wrap__rp{
+					display: inline-block;
+					position:relative;
+					width:125px;
+					text-align: right;
+						span.rp{
+							content: "";
+				            position: absolute;
+				            left:0;
+						}
+				}
+		}
+		p.payment__success--p{
+			margin:0;
+		}
+		h4.payment__success--h4{
+			margin:0px 0px 8px 0px;
+			padding:0;
+			color:#555;
+		}
+		.wrapper__form--resetpassword{
+			// width: 500px;
+		}
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+	.payment__success{
+		margin:25px 0 0 0;
+			p.payment__success--p{	
+				.payment__success__label{
+					width:100px;
+				}
+				.payment__success__labelhr{
+					width:270px;
+				}
+			}
+	}
+	.wrapper__form--resetpassword{
+		width: 100%;
+	}	
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {	
+	.payment__success{
+		margin:60px 0 0 0;
+			p.payment__success--p{	
+				.payment__success__label{
+					width:150px;
+				}
+				.payment__success__labelhr{
+					width:300px;
+				}
+			}
+	}
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+	.wrapper__form--resetpassword{
+		width: 490px;
+	}
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1900px above)----------- */
+@media only screen 
+and (min-width : 1900px) {
+}

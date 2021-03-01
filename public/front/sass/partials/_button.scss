@@ -1,0 +1,132 @@
+
+// button
+.button--login{
+    // display:block;
+    font-size:12px;
+    color:#fff;
+    padding:7px 15px;
+    background:#555;
+    border-radius:5px;
+}
+.button--signup{
+    display: inline-block;
+    font-size:20px;
+    color:#fff;
+    font-weight:100;
+    text-align: center;
+    padding:7px 25px;
+    background:#1f72fc;
+    border-radius:5px;
+    &:hover{
+        background:#206ae4;
+    }
+}
+.button--login--page{
+    @extend .button--signup;
+    background:#bc1718;
+    &:hover{
+        background:#ae1314;
+    }
+}
+.button--cart{
+    position: relative;
+    display:inline-block;
+    font-size:12px;
+    color:#fff;
+    font-weight:100;
+    text-align: center;
+    padding:8px 10px;
+    background:#2692e9;
+    border-radius:5px;
+    &:hover{
+        background:#2389db;
+    }
+}
+.button--account{
+    @extend .button--cart;
+    padding:10px 25px;
+    font-size:14px;
+}
+.button--paymentmethod{
+    @extend .button--cart;
+    font-family: 'Avenir-Medium';
+    white-space: nowrap;
+    padding:10px 24px;
+    font-size:19.2px;
+}
+.button--account2{
+    @extend .button--cart;
+    padding:6px 15px;
+    margin:10px 0;
+    font-size:14px;
+}
+.button--cc--transfer{
+    display: none;
+    @extend .button--account;
+    font-family: 'Avenir-Medium';
+    background: #1f72fc;
+    &:hover{
+        background:#1e69e5;
+    }
+}
+.button--next--cimb{
+    @extend .button--account;
+    font-family: 'Avenir-Medium';
+    @include gradient-color(#eb0202, #c50808);
+    &:hover{
+        @include gradient-color(#d00505, #af0505);
+    }
+}
+.button--order--success{
+    @extend .button--cart;
+    padding:8px 15px;
+    margin:0 15px 0 0;
+    font-size: 16px;
+}
+.button--backtohome{
+    @extend .button--order--success;
+    font-family: 'Avenir-Medium';
+}
+.button--login--popup{
+    display:inline-block;
+    font-family: 'Avenir-Medium';
+    font-size:14px;
+    color:#fff;
+    padding:7px 25px;
+    background:#bc1718;
+    border-radius:5px;
+    &:hover{
+    	background:#ae1314;
+    }
+}
+.button--footer--responsive{
+    @extend .button--account;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 40px auto 0 auto;
+    padding: 8px 80px 7px 10px;
+    font-family: 'Avenir-Roman';
+    font-weight:bold;
+    background: #AC907E;
+    border-radius:3px 3px 0 0;
+    &:hover{
+        background:#997e6c;
+    }
+}
+.button--subscribe{
+    @extend .button--cart;
+    // margin: -4px 0 0 0;
+    width: 105px;
+    padding: 10px 15px 9px 15px;
+    font-size:14px;
+}
+
+/** responsive **/
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+    .button--subscribe{
+        margin: -4px 0 0 0;
+    }            
+}

@@ -1,0 +1,43 @@
+
+.collapse {
+    display: none;
+    // &.bca {
+    //     display: block;
+    // }
+    &__wrapper{
+        position:relative;
+    }
+    &__content{
+        padding:0 1em;
+    }
+} 
+
+
+
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+     .collapse {
+        &__wrapper{
+            .custom--label{
+                padding: 18px 0px 10px 0px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    } 
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+     .collapse {
+        &__wrapper{
+            .custom--label{
+                padding: 8px 0px 3px 18px !important;
+                display: inline-block;
+            }
+        }
+    } 
+}

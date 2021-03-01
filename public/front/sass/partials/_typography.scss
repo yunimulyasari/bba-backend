@@ -1,0 +1,238 @@
+
+h1 {
+    // color: white;
+    // font-size: 36px;
+    font-weight: normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+
+h2 {
+    // color: white;
+    // font-size: 24px;
+    font-weight: bold;
+    margin:0 0 10px 0;
+    padding:0 0 0 0;
+}
+h3 {
+    // color: $abuabutext3;
+    // font-size: 18px;
+    font-weight: bold;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+h4 {
+    // color: white;
+    // font-size: 16px;
+    font-weight: bold;
+    // margin:0 0 0 0;
+    // padding:0 0 0 0;
+}
+h5 {
+    // color: $abuabutext2;
+    // font-size: 14px;
+    font-weight: normal;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+a.link,.link {
+    text-decoration:none;
+    // color: white;
+    &:hover {
+        // color: #7bb9f1;
+    }
+}
+a {
+    text-decoration: none;
+    // color: white;
+}
+label{
+    font-family: 'Avenir-medium';
+    font-size: 16px;
+    color:#000;
+}
+article {
+    p {        
+        // font-size: 16px;
+        // color: $abuabutext4;
+        line-height: 22px;
+            .label--span{
+                display: inline-block;
+                // width:150px;
+            }
+    }
+    ul{
+        padding: 0 1em;
+        li{
+            
+        }
+    }
+}
+ul{    
+    li{
+
+    }
+    &.strip{
+        list-style:none !important;        
+        li{
+            position:relative;
+            list-style:none;
+            &:after{
+                    content: "-";
+                    position: absolute;
+                    left: -15px;
+                    top: -2px;
+            }
+        }
+    }
+}
+p {
+    // font-size: 16px;
+    &.p--small {
+        color: #848c94;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 3px 0;
+    }
+    a{
+        color: #2692e9;
+    }
+}
+blockquote {
+    font-style: italic;
+    color: white;
+    font-size: 22px;
+    margin: 20px 0;
+    position: relative;
+    &:before {
+        content: '';
+        width: 38px;
+        height: 24px;
+        position: absolute;
+        left: -40px;
+        top: 0;
+        background:url(../images/sprite.png) -150px 0 no-repeat;
+    }
+}
+small {
+    font-family: 'MyriadPro-Regular';        
+    // color: $creamtext1;
+    font-size: 13px;
+    // margin: 5px 0;
+}
+
+.center{
+    text-align: center;
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;    
+    }
+    h4 {
+        font-size: 14px;
+    }
+    h5 {
+        font-size: 13px;
+    }
+    p, span {
+        font-size: 14px;
+    }
+    article {
+        p {        
+            font-size: 14px;
+                .label--span{
+                    width:100px;
+                }
+        }
+    }
+    label{
+        font-size: 14px;
+    }
+    ul{
+        li{
+            font-size: 12px;
+        }
+    }
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+     article {
+        p {     
+            .label--span{
+                width:150px;
+            }
+        }
+    }
+    ul{
+        li{
+            font-size: 14px;
+        }
+    }
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {    
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;    
+    }
+    h4 {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+    p, span {
+        font-size: 16px;
+    }
+    article {
+        p {        
+            font-size: 16px;
+        }
+    }
+    label{
+        font-size: 16px;
+    }
+    ul{
+        li{
+            font-size: 16px;
+        }
+    }
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {  
+}
+
+/* (1440px above)----------- */
+@media only screen 
+and (min-width : 1440px) { 
+}
+

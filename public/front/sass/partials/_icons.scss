@@ -1,0 +1,194 @@
+/* icons */
+
+.logo--flowerstudio{    
+    width:79px;
+    height:93px;    
+    background:url('../images/logo--flowerstudio.png') no-repeat center center;
+}
+.logo--fs--mini{    
+    width:40px;
+    height:46px;
+    margin:0;
+    padding:0;
+    background:url('../images/logo--fs--mini.png') no-repeat center center #fff;
+}
+
+.logo--menu{  
+    width:28px;
+    height:18px;
+    background:url('../images/logo--menu.png') no-repeat;
+}
+
+// header name account
+.icon--name--dropdown{
+    position: absolute;
+    top: 8px;
+    margin: 0px;
+    width: 0px; 
+    height: 0px;
+    right:-20px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;    
+    border-top: 6px solid #2375fc;    
+}
+
+// alert
+// account
+.icon--alert{
+    position: absolute;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: -18px;
+}
+.icon--alert--success{
+    @extend .icon--alert;
+    background:url(../images/icon--success--mini.png) no-repeat;
+}
+.icon--alert--failed{
+    @extend .icon--alert;
+    background:url(../images/icon--error--mini.png) no-repeat;
+}
+
+// account
+.icons__cart{
+    display: inline-block;
+    width:23px; height:23px;
+}
+.cart--cart{
+    @extend .icons__cart;
+    background:url(../images/logo--cart--mini.png) no-repeat;
+    margin-right:5px;
+}
+.cart--search{
+    @extend .icons__cart;
+    background:url(../images/logo--search--mini.png) no-repeat;
+}
+.cart--accountname{
+    @extend .icons__cart;
+    cursor: pointer;
+    background:url(../images/icon--accountname.png) no-repeat;
+}
+
+// article
+.icon--article{
+    float:left;
+    display: inline-block;
+    clear:both;
+    width:25px;
+    height:22px;
+    margin:0 10px 0 0;
+}
+.logo--phone{
+    background:url(../images/logo--phone.png) no-repeat;
+}
+.logo--email{
+    background:url(../images/logo--email.png) no-repeat;
+}
+
+// collapse
+.icon--collapse{
+    position: absolute;
+    top: 9px; right:7px;
+    width: 12px; 
+    height: 12px;
+    cursor: pointer;    
+    @include delay (.5s);
+}
+.icon--collapse--max{
+    @extend .icon--collapse;
+    @include rotate (90deg);
+    background:url(../images/icon--collapse--max.png) no-repeat;
+}
+.icon--collapse--min{
+    @extend .icon--collapse;
+    @include rotate (0deg);
+    background:url(../images/icon--collapse--min.png) no-repeat;
+}
+// pagination
+.icon--pagination{
+    position: absolute;
+    top: 2px;
+    margin: 0px;
+    width: 0px; 
+    height: 0px;
+}
+.icon--pagination--left{
+    left:-10px;
+    border-top: 8px solid transparent;                
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #cdc8c5;
+    &:hover{
+        border-top: 8px solid transparent;                
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid #ac907e;
+    }
+}
+.icon--pagination--right{
+    left:5px;
+    border-top: 8px solid transparent;                
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #cdc8c5;
+    &:hover{
+        border-top: 8px solid transparent;                
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid #ac907e;
+    }
+}
+
+// form
+.icon--checklist{  
+    display: inline-block;
+    width:15px;
+    height:14px;
+    background:url('../images/icon--checklist.png') no-repeat;
+}
+
+// payment
+.icon--payment{
+    display: inline-block;
+    width:30px; 
+    height:30px;
+}
+.icon--payment--now{
+    background:url(../images/icon--payment--now.png) no-repeat;
+    @extend .icon--payment;
+}
+.icon--payment--after{
+    background:url(../images/icon--payment--after.png) no-repeat;
+    @extend .icon--payment;
+}
+.icon--payment--before{
+    background:url(../images/icon--payment--before.png) no-repeat;
+    @extend .icon--payment;
+}
+.icon--payment--delete{
+    background:url(../images/icon--delete--mini.png) no-repeat;
+    @extend .icon--payment;
+    &:hover{        
+        background:url(../images/icon--delete--mini--hover.png) no-repeat;
+    }
+}
+.icon--paymentmethod--veritransmini{
+    display: inline-block;
+    width:59px;
+    height:13px;
+    background:url(../images/logo--paymentmethod--veritransmini.png) no-repeat;
+}
+.icon--paymentmethod--error{
+    position: absolute;
+    display: inline-block;
+    width: 23px;
+    height:23px;
+    margin:0 0 0 7px;
+    background:url(../images/icon--error.png) no-repeat;
+}
+.icon--paymentmethod--success{
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    margin:0 0 0 7px;
+    background:url(../images/icon--success.png) no-repeat;
+}
