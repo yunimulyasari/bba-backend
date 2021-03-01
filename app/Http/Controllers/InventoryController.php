@@ -52,6 +52,7 @@ class InventoryController extends Controller
 	{
 		$cartValue = \Cart::getContent();
 		
+		//variable global
 		$conditionId1  = 2;
 		$conditionName1 = 'Macbook_Pro';
 
@@ -77,6 +78,7 @@ class InventoryController extends Controller
 				    'value' => $data['discMac'],
 				));
 
+				// remove specific cart condition then add item
 				\Cart::removeItemCondition($conditionId1, $conditionName1);
 				\Cart::addItemCondition($conditionId1, $itemCondition1);
 			} else {
@@ -94,6 +96,7 @@ class InventoryController extends Controller
 				    'value' => $data['discGoogleHome'],
 				));
 
+				// remove specific cart condition then add item
 				\Cart::removeItemCondition($conditionId2, $conditionName2);
 				\Cart::addItemCondition($conditionId2, $itemCondition2);
 			} else {
@@ -112,6 +115,7 @@ class InventoryController extends Controller
 				    'value' => $data['discAlexa'],
 				));
 
+				// remove specific cart condition then add item
 				\Cart::removeItemCondition($conditionId3, $conditionName3);
 				\Cart::addItemCondition($conditionId3, $itemCondition3);
 			} else {
@@ -119,17 +123,22 @@ class InventoryController extends Controller
 			}
 		}
 
+		//get the total price and the price single item with the conditions
 		foreach ($cartValue as $key => $cart) {
 			$total = \Cart::getTotal();
+			//by conditions in cart
 			if (!empty($cart['conditions'])) {
 				foreach ($cart['conditions'] as $key => $cond) {
 					$priceTotal = $cond->getValue();
 				}
+
+			//by raspberry pi b
 			} else if (\Cart::get(2) !== null) {
 				if (empty(\Cart::get(4)->id) AND $cart->associatedModel['code'] == '234234' AND $cart->quantity == 1 AND !empty(\Cart::get(2)->quantity == 1)) {
 					$priceCond = \Cart::get(2)->price;
 				}
 			} else {
+				//except without conditions show price subtotal by item
 				$priceCond = $cart->getPriceWithConditions() * $cart->quantity;
 			}
 		}
@@ -142,13 +151,11 @@ class InventoryController extends Controller
 
 		$data['carts'] = \Cart::getContent();
 		
-//dd($data);
 		return view('front.inventory_cart', $data);
 	}
 
 	public function checkout(Request $request)
 	{
-		//dd($request);
 		$data['carts']			= \Cart::getContent();
 		$data['qty']  			= $request->input('quantities');
 		$data['total']  		= $request->input('grandTotal');
