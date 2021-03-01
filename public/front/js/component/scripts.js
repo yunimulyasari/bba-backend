@@ -346,6 +346,7 @@ function addPeriod(nStr)
 
     /* remove cart */
     $(".mp-del-cart").click(function(){
+
         var btn = $(this);
         var id = btn.data("id");
         var _data = "id=" + id;
